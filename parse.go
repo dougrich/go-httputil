@@ -9,7 +9,7 @@ import (
 func ParseJson(
 	w http.ResponseWriter,
 	r *http.Request,
-	o interface{}
+	o interface{},
 ) bool {
 
 	b, err := ioutil.ReadAll(r.Body)
