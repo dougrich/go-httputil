@@ -19,8 +19,7 @@ func ParseJson(
 		return false
 	}
 
-	registration := Request{}
-	if err := json.Unmarshal(b, &registration); err != nil {
+	if err := json.Unmarshal(b, &o); err != nil {
 		http.Error(w, ErrorBadJson, http.StatusBadRequest)
 		return false
 	}
