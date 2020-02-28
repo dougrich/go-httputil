@@ -16,12 +16,14 @@ func ParseJson(
 	defer r.Body.Close()
 	if err != nil {
 		http.Error(w, ErrorBodyRead, http.StatusInternalServerError)
-		return
+		return false
 	}
 
 	registration := Request{}
 	if err := json.Unmarshal(b, &registration); err != nil {
 		http.Error(w, ErrorBadJson, http.StatusBadRequest)
-		return
+		return false
 	}
+
+	return true
 }
