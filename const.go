@@ -8,4 +8,6 @@ const (
 	HeaderHost = "Host"
 	MimeTypeUrlEncodedForm = "application/x-www-form-urlencoded"
 	MimeTypeJson = "application/json"
+	ErrorBodyRead = "Error occured reading the body"
+	ErrorBadJson = "Bad JSON format"
 )
