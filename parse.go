@@ -1,9 +1,9 @@
 package httputil
 
 import (
-	"net/http"
-	"io/ioutil"
 	"encoding/json"
+	"io/ioutil"
+	"net/http"
 )
 
 func ParseJson(

@@ -1,15 +1,13 @@
 package httputil
 
 import (
-	"testing"
-	"net/http"
 	htu "github.com/dougrich/httptestutil"
+	"net/http"
+	"testing"
 )
 
-
-
 func CreateHandler(options ValidationSet) http.Handler {
-	return http.HandlerFunc(func (w http.ResponseWriter, r *http.Request) {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if !options.IsValidRequest(w, r) {
 			return
 		}
